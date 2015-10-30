@@ -22,7 +22,7 @@ def word_counter():
 word_counter()
 word = ""
 while word != "_exit":
-    word = raw_input("Enter your word\n")
+    word = raw_input("Enter your word, or exit with '_exit' \n")
     if word in dict:
         print word + ":", dict[word]
     else:
