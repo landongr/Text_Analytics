@@ -1,10 +1,14 @@
-#Text Anylitics
+#Checks for number of occurrences of a word in plain text files
+
+#input your file here
 file = open("C:\Users\Graham\Desktop\data.txt", "r")
 
+#turns file into list and makes all words lowercase
 file_list = file.read().split(" ")
 for x in file_list:
     x = x.lower()
 
+#turns list into dictionary and creates key value pair of word and occurrences
 dict = {}
 def word_counter():
     for word in file_list:
@@ -14,6 +18,7 @@ def word_counter():
         else:
             dict[word] += 1
 
+#takes raw input and provides output from dictionary
 word_counter()
 word = ""
 while word != "_exit":
