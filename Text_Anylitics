@@ -1,4 +1,4 @@
-
+#Text Anylitics
 file = open("C:\Users\Graham\Desktop\data.txt", "r")
 
 file_list = file.read().split(" ")
