@@ -1,0 +1,25 @@
+
+file = open("C:\Users\Graham\Desktop\data.txt", "r")
+
+file_list = file.read().split(" ")
+for x in file_list:
+    x = x.lower()
+
+dict = {}
+def word_counter():
+    for word in file_list:
+        word = word.lower()
+        if word not in dict:
+            dict[word] = 1
+        else:
+            dict[word] += 1
+
+word_counter()
+word = ""
+while word != "_exit":
+    word = raw_input("Enter your word\n")
+    if word in dict:
+        print word + ":", dict[word]
+    else:
+        print "word not used in interview :("
+
